@@ -1,0 +1,134 @@
+/* Estilos para fondo */
+body {
+    background-color: #1B231A;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+    text-transform: uppercase;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/mask.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 1;
+    z-index: -1;
+    pointer-events: none;
+    background-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+}
+
+/* Barra de navegación */
+/* Estilos personalizados para las pestañas */
+.nav-tabs .nav-link {
+    color: #fff !important;
+    border: none;
+}
+
+.nav-tabs .nav-link.active {
+    color: #1B231A !important;
+    border: none;
+}
+
+/* Opcional: Para quitar el borde inferior que Bootstrap agrega por defecto */
+.nav-tabs {
+    border-bottom: none;
+}
+
+.status {
+                background-color: #455046;
+                color: white;
+                padding: 10px;
+                border-radius: 5px;
+                font-family: monospace;
+                font-size: 14px;
+                margin: 15px auto;
+                max-width: 500px;
+                word-break: break-all;
+                text-align: center;
+            }
+/* Datos */
+.etiqueta {
+    color: #C49A6E !important;
+}
+
+.datos {
+    color: #455046;
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+/* Contenedor principal para el grid de datos */
+.datos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* Estilo para cada item del grid */
+.dato-item {
+    display: flex;
+    flex-direction: column;
+    min-height: 3em;
+}
+
+/* Estilo para los textos de datos (valores) */
+.valor-dato {
+    color: #455046;
+    font-weight: bold;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    line-height: 1.2;
+    min-height: 1em;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .datos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
+
+/* Estilos adicionales */
+.logo-morelos {
+    max-height: 80px;
+}
+
+.card-title {
+    color: #1B231A;
+    font-weight: bold;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+
+/* textareas */
+textarea {
+    background-color: white;
+    cursor: default;
+    resize: none;
+    min-height: 5rem;
+    max-height: 5rem;
+    overflow-y: auto;
+    opacity: 1;
+    font-family: monospace;
+    white-space: pre-wrap; 
+}
